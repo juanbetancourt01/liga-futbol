@@ -93,7 +93,7 @@ void mostrarJornadas(const std::string& ruta) {
     std::string linea;
     while (std::getline(archivo, linea)) {
         if (linea.empty()) continue;
-        std::cout << linea << "\n";
+        std:: cout << linea << "\n";
     }
 }
 
