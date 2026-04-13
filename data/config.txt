@@ -4,5 +4,5 @@ empatar=1
 perder=0
 equipo=ManchesterCity
 equipo=Arsenal
-equipo=Liverpool
 equipo=Chelsea
+equipo=Liverpool
