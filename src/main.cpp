@@ -47,9 +47,9 @@ bool leerConfig(const std::string& ruta, ConfigLiga& cfg) {
         std::istringstream ss(linea);
         if (!std::getline(ss, clave, '=') || !std::getline(ss, valor)) continue;
         if (clave == "liga") { cfg.nombre = valor; tienNombre = true; }
-        else if (clave == "ganar")    { cfg.ptsGanar   = std::stoi(valor); tienGanar   = true; } // FIX: } faltaba
-        else if (clave == "empatar")  { cfg.ptsEmpatar = std::stoi(valor); tienEmpatar = true; } // FIX: } faltaba
-        else if (clave == "perder")   { cfg.ptsPerder  = std::stoi(valor); tienPerder  = true; } // FIX: } faltaba
+        else if (clave == "ganar")    { cfg.ptsGanar   = std::stoi(valor); tienGanar   = true; } 
+        else if (clave == "empatar")  { cfg.ptsEmpatar = std::stoi(valor); tienEmpatar = true; } 
+        else if (clave == "perder")   { cfg.ptsPerder  = std::stoi(valor); tienPerder  = true; } 
         else if (clave == "equipo")   { cfg.equipos.push_back(valor); }
     }
     if (!tienNombre || !tienGanar || !tienEmpatar || !tienPerder || cfg.equipos.empty()) {
@@ -63,7 +63,7 @@ std::vector<Partido> leerPartidos(const std::string& ruta) {
     std::vector<Partido> lista;
     std::ifstream archivo(ruta);
     if (!archivo.is_open()) {
-        std::cout << "Aviso: no se encontro " << ruta << ". Se asume sin partidos previos.\n"; // FIX: ; faltaba
+        std::cout << "Aviso: no se encontro " << ruta << ". Se asume sin partidos previos.\n"; 
         return lista;
     }
     std::string linea;
